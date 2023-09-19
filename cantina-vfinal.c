@@ -71,59 +71,64 @@ int main() {
 
             case 6:
                 // Remover itens
-                printf("\n\nO que deseja remover?\n");
-                printf("\n1 - Remover Suco\n2 - Remover Coxinha\n3 - Remover Pastel\n4 - Remover Refri\n5 - Retornar\n");
-                printf("\nDigite o número do item que deseja remover: ");
-                scanf("%d", &item);
+                if (total > 0) {
+                    printf("\n\nO que deseja remover?\n");
+                    printf("\n1 - Remover Suco\n2 - Remover Coxinha\n3 - Remover Pastel\n4 - Remover Refri\n5 - Retornar\n");
+                    printf("\nDigite o número do item que deseja remover: ");
+                    scanf("%d", &item);
 
-                switch (item) {
-                    case 1:
-                        if (qsuco > 0) {
-                            qsuco--;
-                            total -= suco_preco;
-                            printf("\nSuco removido do carrinho.\n");
-                        } else {
-                            printf("\nNão há suco no carrinho para remover.\n");
-                        }
-                        break;
+                    switch (item) {
+                        case 1:
+                            if (qsuco > 0) {
+                                qsuco--;
+                                total -= suco_preco;
+                                printf("\nSuco removido do carrinho.\n");
+                            } else {
+                                printf("\nNão há suco no carrinho para remover.\n");
+                            }
+                            break;
 
-                    case 2:
-                        if (qcoxinha > 0) {
-                            qcoxinha--;
-                            total -= coxinha_preco;
-                            printf("\nCoxinha removida do carrinho.\n");
-                        } else {
-                            printf("\nNão há coxinha no carrinho para remover.\n");
-                        }
-                        break;
+                        case 2:
+                            if (qcoxinha > 0) {
+                                qcoxinha--;
+                                total -= coxinha_preco;
+                                printf("\nCoxinha removida do carrinho.\n");
+                            } else {
+                                printf("\nNão há coxinha no carrinho para remover.\n");
+                            }
+                            break;
 
-                    case 3:
-                        if (qpastel > 0) {
-                            qpastel--;
-                            total -= pastel_preco;
-                            printf("\nPastel removido do carrinho.\n");
-                        } else {
-                            printf("\nNão há pastel no carrinho para remover.\n");
-                        }
-                        break;
+                        case 3:
+                            if (qpastel > 0) {
+                                qpastel--;
+                                total -= pastel_preco;
+                                printf("\nPastel removido do carrinho.\n");
+                            } else {
+                                printf("\nNão há pastel no carrinho para remover.\n");
+                            }
+                            break;
 
-                    case 4:
-                        if (qrefri > 0) {
-                            qrefri--;
-                            total -= refri_preco;
-                            printf("\nRefri removido do carrinho.\n");
-                        } else {
-                            printf("\nNão há refri no carrinho para remover.\n");
-                        }
-                        break;
+                        case 4:
+                            if (qrefri > 0) {
+                                qrefri--;
+                                total -= refri_preco;
+                                printf("\nRefri removido do carrinho.\n");
+                            } else {
+                                printf("\nNão há refri no carrinho para remover.\n");
+                            }
+                            break;
 
-                    case 5:
-                        break;
+                        case 5:
+                            break;
 
-                    default:
-                        printf("\nOpção inválida.\n");
+                        default:
+                            printf("\nOpção inválida.\n");
+                            break;
+                    } 
+                    }else {
+                        printf("\nNão há nenhum item no carrinho para ser removido!\n");
                         break;
-                }
+                    }
                 break;
 
             default:
