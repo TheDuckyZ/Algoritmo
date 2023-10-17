@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void media(float nota1, float nota2){
+    float media;
+    media = (nota1 + nota2) / 2;
+    printf("A média é %.1f", media);
+}
+
+int main() {
+    float nota1, nota2;
+
+    printf("Digite as notas dos alunos:\n\n");
+    printf("Aluno A:\n");
+
+    printf("1° avaliação: ");
+    scanf("%f", &nota1);
+
+    printf("2° avaliação: ");
+    scanf("%f", &nota2);
+
+    media(nota1, nota2);
+}
