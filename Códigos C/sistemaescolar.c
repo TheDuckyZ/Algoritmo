@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    float nota[3][4], soma;
+    float nota[5][5], soma;
     int i, j, alunos, qtdAval;
 
     // Definir a quantidade de notas
@@ -14,21 +14,33 @@ int main() {
 
     // Range de alunos e avaliações
     for (i = 0; i < alunos; i++) {
+        printf("\n Aluno %d\n", i+1);
+
         for (j = 0; j < qtdAval; j++) {
-            printf("\n Aluno %d\nAv.%d = ", i+1, j+1);
+            printf("Av.%d = ", j+1);
             scanf("%f", &nota[i][j]);
         }
     }
-    // Pedir, salvar e somas as notas
 
     // Imprimir as notas digitadas
     for(i = 0; i < alunos; i++){
+        printf("\n  Aluno %d:", i+1);
+
         for(j = 0; j < qtdAval; j++){
-            printf("\n  Aluno %d:", i+1);
             printf("\nAv.%d: %.1f", j+1, nota[i][j]);
-            soma += nota[i][j];
+            soma += nota[0][j];
         }
     }
-    // Mostrar a média das notas
-    printf("\n\nA média das notas é %.1f\n", soma/alunos);
+    printf("\n\n------- Médias -----\n");
+
+    // Calcular as médias
+    for (i = 0; i < alunos; i++){
+        soma = 0;
+
+        for (j = 0; j < qtdAval; j++){
+            soma += nota[i][j];
+        }
+        // Mostrar a média das notas
+        printf("\nAluno %d\nMédia: %.1f\n", i+1,soma/qtdAval);
+    }
 }
