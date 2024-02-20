@@ -1,0 +1,20 @@
+ #include <stdio.h>
+
+ typedef struct pessoa{
+    int idade;
+    struct pessoa *braco;
+ }pessoa;
+
+ int main(){
+    pessoa *maria = (pessoa*) malloc(sizeof(pessoa)); 
+    pessoa *julia = (pessoa*) malloc(sizeof(pessoa));
+
+    maria -> idade = 18;
+    julia -> idade = 20;
+
+    maria -> braco = julia;
+    julia -> braco = NULL;
+
+    printf("Idade de Maria: %d\n", maria->idade);
+    printf("Idade de Julia: %d\n", maria->braco->idade);
+ }
