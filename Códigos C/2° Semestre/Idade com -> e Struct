@@ -1,5 +1,4 @@
  #include <stdio.h>
-#include <unistd.h>
 
  typedef struct pessoa{
     int idade;
@@ -26,10 +25,8 @@
     printf("Idade de Maria: %d\n", maria->idade);
     printf("Idade de Julia: %d\n", maria->braco->idade);
     printf("Idade de Jonas: %d\n", maria->braco->braco->idade);
-    sleep(1);
 
     printf("\n\nAtualizando o sistema\nAguarde...\n\n");
-    sleep(2);
 
     // Mudar o braço
     manoel -> braco = maria -> braco;
