@@ -1,3 +1,3 @@
 # Algoritmo
 
-Esse repositório foi criado para guardar os códigos/projetos e aprendizados desenvolvidos durante a faculdade de Ciências da Computação.
+Esse repositório foi criado para guardar os códigos/projetos e aprendizados desenvolvidos durante o curso de Ciências da Computação.
